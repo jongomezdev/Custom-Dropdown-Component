@@ -1,0 +1,65 @@
+.menu {
+  user-select: none;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 100px;
+  
+  .menu-toggle {
+    padding: 15px 20px;
+    background: #ffffff;
+    border: 1px solid #c5cedd;
+    color: blue;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+
+  .menu-toggle.default {
+    height: 25px;
+  }
+
+  .menu-toggle.large {
+    height: 50px;
+    width: 125px;
+  }
+
+  .menu-toggle.menu-expanded {
+      background-color: #1f2d46;
+      color: white;
+
+      span {
+        transform: rotate(90deg)
+      }
+  }
+
+  .menu-content {
+    visibility: none;
+  }
+
+  .menu-content.menu-expanded {
+    list-style-type: none;
+    position: relative;
+    bottom: 5px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    border: 1px solid black;
+    width: 94px;
+    display: visible;
+  }
+
+  .menu-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #e5e9f1;
+    }
+  }
+}
